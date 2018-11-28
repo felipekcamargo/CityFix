@@ -11,16 +11,18 @@ public class Ocorrencia implements Serializable {
     private String descricao;
     private String endereco;
     private String photoUrl;
+    private String emailUsuario;
   //  private int sumAvaliacao;
  //   private int countAvaliacao;
     public Ocorrencia(){}
 
-    public Ocorrencia(String id, String titulo, String descricao, String endereco, String photoUrl) {
+    public Ocorrencia(String id, String titulo, String descricao, String endereco, String photoUrl, String emailUsuario) {
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
         this.endereco = endereco;
         this.photoUrl = photoUrl;
+        this.emailUsuario = emailUsuario;
       //  this.sumAvaliacao = sumAvaliação;
       //  this.countAvaliacao = countAvaliacao;
     }
@@ -65,12 +67,12 @@ public class Ocorrencia implements Serializable {
         this.photoUrl = photoUrl;
     }
 
-   // public int getSumAvaliacao(){
-  //      return sumAvaliacao;
-   // }
-  //  public void setSumAvaliacao(int sumAvaliacao) {
-  //      this.sumAvaliacao = sumAvaliacao;
-   // }
+    public String getEmailUsuario(){
+        return emailUsuario;
+    }
+    public void setEmailUsuario(String emailUsuario) {
+       this.emailUsuario = emailUsuario;
+    }
   //  public int getCountAvaliacao(){
    //     return countAvaliacao;
    // }

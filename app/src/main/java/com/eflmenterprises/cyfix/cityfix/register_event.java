@@ -105,7 +105,7 @@ public class register_event extends AppCompatActivity {
                             DatabaseReference ref = FirebaseDatabase.getInstance().getReference("ocorrencias")
                                     .push();
                             String pathUrl = String.format("ocorrencias/%s.jpg", ref.getKey());
-                            Ocorrencia ocorrencia = new Ocorrencia(ref.getKey(), titulo, descricao, endereco, pathUrl);
+                            Ocorrencia ocorrencia = new Ocorrencia(ref.getKey(), titulo, descricao, endereco, pathUrl, "INSERIR O EMAIL");
                             ref.setValue(ocorrencia);
 
                             salvarFoto(pathUrl,
