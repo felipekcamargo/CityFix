@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "860204759318",
+    "firebase_url": "https://cyfixapp.firebaseio.com",
+    "project_id": "cyfixapp",
+    "storage_bucket": "cyfixapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860204759318:android:1ee8002538bbeb3a",
+        "android_client_info": {
+          "package_name": "com.eflmenterprises.cyfix.cityfix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860204759318-d56hko6ii7u38bm4p80hek30ovgmtuna.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eflmenterprises.cyfix.cityfix",
+            "certificate_hash": "9caac669aa59c72343ccb6dbc7688724fb1b0cb1"
+          }
+        },
+        {
+          "client_id": "860204759318-uh6034vjn85v087b88frs9kbpk3hm0a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs3NVfwboNRikq3VjN6iDZj41Ljf0i4-Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860204759318-uh6034vjn85v087b88frs9kbpk3hm0a8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
