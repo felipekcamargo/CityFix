@@ -47,10 +47,10 @@ public class register_event extends AppCompatActivity {
     private Button bFoto;
     private Button btnSalvar;
     private ImageView imgFoto;
-
     private EditText edtTitulo;
     private EditText edtDescricao;
     private EditText edtEndereco;
+
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -77,12 +77,14 @@ public class register_event extends AppCompatActivity {
         edtDescricao = findViewById(R.id.edtDescricaoId);
         edtEndereco = findViewById(R.id.edtEnderecoId);
 
+
         bFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dispatchTakePictureIntent();
             }
         });
+
 
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -24,7 +24,8 @@
         <activity android:name=".create_account" />
         <activity android:name=".mainWindow" />
         <activity android:name=".register_event" />
-        <activity android:name=".OcorrenciaActivity"></activity>
+        <activity android:name=".OcorrenciaActivity" />
+        <activity android:name=".editarOcorrencia"></activity>
     </application>
 
 </manifest>

@@ -1,9 +1,12 @@
 package com.eflmenterprises.cyfix.cityfix;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,18 +14,31 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 
+
 public class OcorrenciaActivity extends AppCompatActivity {
 
     ImageView imgFoto;
     TextView txtDescricao;
     TextView txtEndereco;
    // TextView txtAvaliacao;
-
+    private Button bEditar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ocorrencia);
+
+        bEditar = findViewById(R.id.bEditarId);
+
+        bEditar.setVisibility(1);
+
+        bEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(OcorrenciaActivity.this, register_event.class)); // Ir para outra tela, nesse caso saindo de login e indo para create_account
+            }
+        });
 
         Bundle extras = getIntent().getExtras();
         if (extras == null) {
@@ -49,6 +65,7 @@ public class OcorrenciaActivity extends AppCompatActivity {
 
             txtDescricao.setText(ocorrencia.getDescricao());
             txtEndereco.setText(ocorrencia.getEndereco());
+
           //  txtAvaliacao.setText(ocorrencia.getSumAvaliacao()/ocorrencia.getCountAvaliacao());
 
         }
