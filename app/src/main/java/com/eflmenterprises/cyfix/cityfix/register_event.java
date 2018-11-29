@@ -78,6 +78,7 @@ public class register_event extends AppCompatActivity {
         edtEndereco = findViewById(R.id.edtEnderecoId);
 
 
+
         bFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,9 +116,10 @@ public class register_event extends AppCompatActivity {
                                     .push();
                             String pathUrl = String.format("ocorrencias/%s.jpg", ref.getKey());
                             //todo inserir email -> colocar o email do login
-
-                            Ocorrencia ocorrencia = new Ocorrencia(ref.getKey(), titulo, descricao, endereco, pathUrl, "INSERIR O EMAIL");
+                            Ocorrencia ocorrencia = new Ocorrencia(ref.getKey(), titulo, descricao, endereco, pathUrl, "email");
                             ref.setValue(ocorrencia);
+
+                            btnSalvar.setEnabled(false);
 
                             salvarFoto(pathUrl,
                                     new OnFailureListener() {

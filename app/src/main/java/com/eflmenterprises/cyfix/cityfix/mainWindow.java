@@ -83,7 +83,5 @@ public class mainWindow extends AppCompatActivity {
         });
 
 
-
-
     }
 }

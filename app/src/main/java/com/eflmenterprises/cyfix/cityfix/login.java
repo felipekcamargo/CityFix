@@ -35,6 +35,7 @@ public class login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -42,6 +43,7 @@ public class login extends AppCompatActivity {
         bLogin = findViewById(R.id.bLoginId);
         eEmail = findViewById(R.id.eEmailId);
         ePassword = findViewById(R.id.ePasswordId);
+
 
         bCreateAccount.setOnClickListener(new View.OnClickListener() { //Qaundo você clica no botão de criar conta
             @Override
@@ -52,6 +54,8 @@ public class login extends AppCompatActivity {
         });
 
         bLogin.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
 
