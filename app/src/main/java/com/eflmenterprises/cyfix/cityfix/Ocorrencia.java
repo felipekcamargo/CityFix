@@ -27,6 +27,7 @@ public class Ocorrencia implements Serializable {
       //  this.countAvaliacao = countAvaliacao;
     }
 
+
     public String getId() {
         return id;
     }

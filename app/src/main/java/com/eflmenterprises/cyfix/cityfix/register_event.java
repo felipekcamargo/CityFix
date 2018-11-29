@@ -95,18 +95,26 @@ public class register_event extends AppCompatActivity {
                 String endereco = edtEndereco.getText().toString();
 
                 // TODO validar campos preenchidos / foto tirada
-                if (edtTitulo.getText().toString().equals("")) {
+                if (edtTitulo.getText().toString().equals(""))
+                {
                     screenMessage("Titulo vazio");
-                } else {
-                    if (edtDescricao.getText().toString().equals("")) {
+                }
+                else
+                    {
+                    if (edtDescricao.getText().toString().equals(""))
+                    {
                         screenMessage("Descricao vazia");
-                    } else {
-                        if (edtEndereco.getText().toString().equals("")) {
-                            screenMessage("Endereo vazio");
-                        } else {
+                    } else
+                        {
+                        if (edtEndereco.getText().toString().equals(""))
+                        {
+                            screenMessage("Endereço vazio");
+                        }
+                        else {
                             DatabaseReference ref = FirebaseDatabase.getInstance().getReference("ocorrencias")
                                     .push();
                             String pathUrl = String.format("ocorrencias/%s.jpg", ref.getKey());
+                            //todo inserir email -> colocar o email do login
                             Ocorrencia ocorrencia = new Ocorrencia(ref.getKey(), titulo, descricao, endereco, pathUrl, "INSERIR O EMAIL");
                             ref.setValue(ocorrencia);
 
