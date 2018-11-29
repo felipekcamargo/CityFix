@@ -115,6 +115,7 @@ public class register_event extends AppCompatActivity {
                                     .push();
                             String pathUrl = String.format("ocorrencias/%s.jpg", ref.getKey());
                             //todo inserir email -> colocar o email do login
+
                             Ocorrencia ocorrencia = new Ocorrencia(ref.getKey(), titulo, descricao, endereco, pathUrl, "INSERIR O EMAIL");
                             ref.setValue(ocorrencia);
 
