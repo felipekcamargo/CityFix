@@ -2,6 +2,7 @@ package com.eflmenterprises.cyfix.cityfix;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -116,7 +117,8 @@ public class register_event extends AppCompatActivity {
                                     .push();
                             String pathUrl = String.format("ocorrencias/%s.jpg", ref.getKey());
                             //todo inserir email -> colocar o email do login
-                            Ocorrencia ocorrencia = new Ocorrencia(ref.getKey(), titulo, descricao, endereco, pathUrl, "email");
+                            SharedPreferences sp = getSharedPreferences("cityFix",Context.MODE_PRIVATE);
+                            Ocorrencia ocorrencia = new Ocorrencia(ref.getKey(), titulo, descricao, endereco, pathUrl, sp.getString("Email",null));
                             ref.setValue(ocorrencia);
 
                             btnSalvar.setEnabled(false);

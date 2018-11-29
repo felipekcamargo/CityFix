@@ -2,6 +2,7 @@ package com.eflmenterprises.cyfix.cityfix;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -72,6 +73,8 @@ public class login extends AppCompatActivity {
                                 String minhaVariavelFeliz = (String) dataSnapshot.getChildren().iterator().next().child("Senha").getValue();
 
                                 if (ePassword.getText().toString().equals(minhaVariavelFeliz)) {
+                                    SharedPreferences sp = getSharedPreferences("cityFix",Context.MODE_PRIVATE);
+                                    sp.edit().putString("Email",eEmail.getText().toString()).apply();
                                     startActivity(new Intent(login.this, mainWindow.class));
                                     finish();
                                 } else {
