@@ -10,7 +10,7 @@
         android:id="@+id/lVId"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bOcorrenciaId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,12 +18,13 @@
 
     <Button
         android:id="@+id/bOcorrenciaId"
-        android:layout_width="wrap_content"
+        android:layout_width="357dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
+        android:layout_marginBottom="8dp"
         android:text="Criar ocorrência"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lVId" />
 </android.support.constraint.ConstraintLayout>
